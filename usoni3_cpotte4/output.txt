@@ -1,0 +1,180 @@
+<QUESTION> 
+Is Kubrick a director?
+
+<QUERY>
+Select Count(*) 
+FROM Person P INNER JOIN Director D on P.id = D.director_id 
+WHERE P.name LIKE '%Kubrick%';
+
+<ANSWER>
+Yes
+
+
+<QUESTION> 
+Is Mighty Aphrodite by Allen?
+
+<QUERY>
+Select Count(*) 
+FROM Person P INNER JOIN Movie M on P.id = M.id 
+WHERE P.name LIKE '%Allen%' AND M.name LIKE '%Mighty%';
+
+<ANSWER>
+No
+
+
+<QUESTION> 
+Was Loren born in Italy?
+
+<QUERY>
+Select Count(*) 
+FROM Person P 
+WHERE P.name LIKE '%Loren%' AND pob LIKE '%Italy%';
+
+<ANSWER>
+Yes
+
+
+<QUESTION> 
+Was Birdman the best movie in 2015?
+
+<QUERY>
+Select Count(*) 
+FROM movie INNER JOIN oscar on movie.id=oscar.movie_id 
+WHERE movie.name LIKE '%Birdman%' AND type LIKE '%BEST-PICTURE%' AND oscar.year LIKE '%2015%';
+
+<ANSWER>
+Yes
+
+
+<QUESTION> 
+Did Neeson star in Schindler’s List?
+
+<QUERY>
+Select Count(*) 
+FROM Person P INNER JOIN Movie M on P.id = M.id 
+WHERE P.name LIKE '%Neeson%' AND M.name LIKE '%List%';
+
+<ANSWER>
+No
+
+
+<QUESTION> 
+Did Swank win the oscar in 2000?
+
+<QUERY>
+Select Count(*) 
+FROM oscar INNER JOIN person on oscar.person_id=person.id INNER JOIN actor on person.id=actor.actor_id
+ WHERE person.name LIKE '%Swank%' AND oscar.year LIKE '%2000%';
+
+<ANSWER>
+Yes
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Did a French actor win the oscar in 2012?
+
+<QUERY>
+Select Count(*) 
+FROM oscar INNER JOIN person on oscar.person_id=person.id 
+WHERE pob LIKE '%France%' AND oscar.year LIKE '%2012%';
+
+<ANSWER>
+Yes
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Did a movie with Neeson win the oscar for best film?
+
+<QUERY>
+Select Count(*) 
+FROM oscar INNER JOIN person on oscar.person_id=person.id 
+WHERE person.name LIKE '%Neeson%' AND type LIKE '%BEST_PICTURE%';
+
+<ANSWER>
+No
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Who directed Schindler’s List?
+
+<QUERY>
+
+SELECT P.name FROM PERSON P 
+INNER JOIN Director D on P.id = D.director_id INNER JOIN MOVIE M on D.movie_id = M.id 
+WHERE M.name LIKE '%Schindler%';
+
+<ANSWER>
+Steven Spielberg
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Who won the oscar for best actor in 2005?
+
+<QUERY>
+
+SELECT DISTINCT P.name FROM PERSON P 
+INNER JOIN ACTOR A on P.id = A.actor_id INNER JOIN OSCAR O on P.id = O.person_id 
+WHERE O.year = 2005 AND O.type = "BEST-ACTOR";
+
+<ANSWER>
+Jamie Foxx
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Who directed the best movie in 2010?
+
+<QUERY>
+
+SELECT P.name FROM PERSON P 
+INNER JOIN Director D on P.id = D.director_id INNER JOIN OSCAR O on D.movie_id = O.movie_id 
+WHERE O.type = "BEST-PICTURE" and O.year = 2010;
+
+<ANSWER>
+Kathryn Bigelow
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Which American actress won the oscar in 2012?
+
+<QUERY>
+
+SELECT DISTINCT P.name FROM PERSON P 
+INNER JOIN ACTOR A on P.id = A.actor_id INNER JOIN OSCAR O on P.id = O.person_id 
+WHERE O.year = 2012 AND O.type = "BEST-ACTRESS";
+
+<ANSWER>
+Meryl Streep
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+Which movie won the oscar in 2000?
+
+<QUERY>
+
+SELECT M.name FROM MOVIE M 
+INNER JOIN OSCAR O ON M.id = O.movie_id 
+WHERE O.type = "BEST-PICTURE" AND O.year = 2000;
+
+<ANSWER>
+American Beauty
+Reading TokensRegex rules from custom.rules
+May 04, 2019 3:27:38 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+INFO: Read 10 rules
+<QUESTION> 
+When did Blanchett win an oscar for best actress?
+
+<QUERY>
+
+SELECT O.year FROM OSCAR O 
+INNER JOIN PERSON P on P.id = O.person_id 
+WHERE O.type = "BEST-ACTRESS" and P.name LIKE '%Blanchett%';
+
+<ANSWER>
+2014

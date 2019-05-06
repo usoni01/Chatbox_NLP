@@ -1,0 +1,28 @@
+ner = { type: "CLASS", value: "edu.stanford.nlp.ling.CoreAnnotations$NamedEntityTagAnnotation" }
+
+$MUSIC = "/track|album|artist|song|sang|sung|sing|pop|Gaga|rock|include the track/"
+$MOVIES = "/starred|star|acting|cameraman|directed|best movie|movie|film|video|oscar|actor|actress|action|comdey|director|producer/"
+$GEOGRAPHY = "/location|place|europe|asia|america|mountain|continent|city|village|world|country|town|area|postal code|address|capital|capital of|africa|Atlantic|Pacific|Arabic|sea|highest|deepest|ocean/"
+
+ENV.defaults["stage"] = 1
+
+{
+pattern: (([pos:/NNP/ | pos:/NN/ | pos:/JJ/ | pos:/VBZ/ | pos:/IN/ | pos:/VN/ | pos:/DT/ | pos:/VBP/]+) ($MUSIC)),
+action: (Annotate($0, ner, "MUSIC")),
+result: "MUSIC"
+}
+
+ENV.defaults["stage"] = 2
+
+{
+pattern: (([pos:/NNP/ | pos:/NN/ | pos:/JJ/ | pos:/VBZ/ | pos:/IN/ | pos:/VN/ | pos:/DT/ | pos:/VBP/]+) ($MOVIES)),
+action: (Annotate($0, ner, "MOVIES")),
+result: "MOVIES"
+}
+
+ENV.defaults["stage"] = 3
+{
+pattern: (([pos:/NNP/ | pos:/NN/ | pos:/JJ/ | pos:/VBZ/ | pos:/IN/ | pos:/VN/ | pos:/DT/ | pos:/VBP/]+) ($GEOGRAPHY)),
+action: (Annotate($0, ner, "GEOGRAPHY")),
+result: "GEOGRAPHY"
+}

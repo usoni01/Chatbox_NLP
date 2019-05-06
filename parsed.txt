@@ -1,0 +1,196 @@
+<QUESTION>Is Kubrick a director?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBZ Is)
+    (NP (NNP Kubrick))
+    (NP (DT a) (NN director))
+    (. ?)))
+
+
+<QUESTION>Is Mighty Aphrodite by Allen?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBZ Is)
+    (NP (NNP Mighty))
+    (NP
+      (NP (NNP Aphrodite))
+      (PP (IN by)
+        (NP (NNP Allen))))
+    (. ?)))
+
+
+<QUESTION>Was Loren born in Italy?
+<CATEGORY>MUSIC
+<PARSETREE>
+(ROOT
+  (SQ (VBD Was)
+    (NP (NNP Loren))
+    (VP (VBN born)
+      (PP (IN in)
+        (NP (NNP Italy))))
+    (. ?)))
+
+
+<QUESTION>Was Birdman the best movie in 2015?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBD Was)
+    (NP (NNP Birdman))
+    (PP
+      (NP (DT the) (JJS best) (NN movie))
+      (PP (IN in)
+        (NP (CD 2015))))
+    (. ?)))
+
+
+<QUESTION>Did Neeson star in Schindler’s List?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBD Did)
+    (NP (NNP Neeson))
+    (VP (VB star)
+      (PP (IN in)
+        (NP
+          (NP (NNP Schindler) (POS 's))
+          (NN List))))
+    (. ?)))
+
+
+<QUESTION>Did Swank win the oscar in 2000?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBD Did)
+    (NP (NNP Swank))
+    (VP (VB win)
+      (NP
+        (NP (DT the) (NN oscar))
+        (PP (IN in)
+          (NP (CD 2000)))))
+    (. ?)))
+
+
+<QUESTION>Did a French actor win the oscar in 2012?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SQ (VBD Did)
+    (NP (DT a) (JJ French) (NN actor))
+    (VP (VB win)
+      (NP
+        (NP (DT the) (NN oscar))
+        (PP (IN in)
+          (NP (CD 2012)))))
+    (. ?)))
+
+
+<QUESTION>Did a movie with Neeson win the oscar for best film?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (S
+    (S
+      (VP (VBD Did)
+        (NP (DT a) (NN movie))
+        (PP (IN with)
+          (NP (NNP Neeson)))))
+    (VP (VBP win)
+      (NP
+        (NP (DT the) (NN oscar))
+        (PP (IN for)
+          (NP (JJS best) (NN film)))))
+    (. ?)))
+
+
+<QUESTION>Who directed Schindler’s List?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHNP (WP Who))
+    (SQ
+      (VP (VBD directed)
+        (NP
+          (NP (NNP Schindler) (POS 's))
+          (NN List))))
+    (. ?)))
+
+
+<QUESTION>Who won the oscar for best actor in 2005?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHNP (WP Who))
+    (SQ
+      (VP (VBD won)
+        (NP (DT the) (NN oscar))
+        (PP (IN for)
+          (NP (JJS best) (NN actor)))
+        (PP (IN in)
+          (NP (CD 2005)))))
+    (. ?)))
+
+
+<QUESTION>Who directed the best movie in 2010?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHNP (WP Who))
+    (SQ
+      (VP (VBD directed)
+        (NP
+          (NP (DT the) (JJS best) (NN movie))
+          (PP (IN in)
+            (NP (CD 2010))))))
+    (. ?)))
+
+
+<QUESTION>Which American actress won the oscar in 2012?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHNP (WDT Which) (JJ American) (NN actress))
+    (SQ
+      (VP (VBD won)
+        (NP (DT the) (NN oscar))
+        (PP (IN in)
+          (NP (CD 2012)))))
+    (. ?)))
+
+
+<QUESTION>Which movie won the oscar in 2000?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHNP (WDT Which) (NN movie))
+    (SQ
+      (VP (VBD won)
+        (NP (DT the) (NN oscar))
+        (PP (IN in)
+          (NP (CD 2000)))))
+    (. ?)))
+
+
+<QUESTION>When did Blanchett win an oscar for best actress?
+<CATEGORY>MOVIES
+<PARSETREE>
+(ROOT
+  (SBARQ
+    (WHADVP (WRB When))
+    (SQ (VBD did)
+      (NP (NNP Blanchett))
+      (VP (VB win)
+        (NP
+          (NP (DT an) (NN oscar))
+          (PP (IN for)
+            (NP (JJS best) (NN actress))))))
+    (. ?)))
+
